@@ -24,7 +24,7 @@ function Register() {
         toast.error(data.error);
       } else {
         setData({});
-        toast.success("Login Successful");
+        toast.success("Register Successful");
         navigate("/login");
       }
     } catch (error) {
@@ -41,6 +41,7 @@ function Register() {
           placeholder="enter name..."
           value={data.name}
           onChange={(e) => setData({ ...data, name: e.target.value })}
+          required
         />
 
         <label>Email</label>
@@ -49,6 +50,7 @@ function Register() {
           placeholder="enter email..."
           value={data.email}
           onChange={(e) => setData({ ...data, email: e.target.value })}
+          required
         />
 
         <label>Password</label>
@@ -57,6 +59,7 @@ function Register() {
           placeholder="enter password..."
           value={data.password}
           onChange={(e) => setData({ ...data, password: e.target.value })}
+          required
         />
 
         <button type="submit">Submit</button>
